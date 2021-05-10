@@ -1,0 +1,144 @@
+/* Custom Properties */
+:root {
+  --clr-primary: hsl(105, 0%, 100%);
+  --clr-error: hsl(0, 100%, 50%);
+  --clr-success: hsl(105, 63%, 50%);
+
+  --font-size-base: 0.875rem;
+  --font-size-small: 1rem;
+  --font-size-big: 2.5rem;
+  --font-size-medium: 1.8rem;
+
+  --spacing-big: 3em;
+  --spacing-medium: 1em;
+  --spacing-small: 0.65em;
+}
+
+/*Reset*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
+  line-height: 1.5;
+  font-size: var(--font-size-base);
+}
+
+/* Global Styling*/
+h1,
+h2 {
+  text-transform: capitalize;
+  letter-spacing: var(spacing-small);
+  margin-bottom: var(--spacing-medium);
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--font-size-big);
+  margin-top: var(--spacing-medium);
+}
+
+h2 {
+  font-size: var(--font-size-medium);
+  margin-top: var(--spacing-medium);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: var(--font-size-medium);
+  }
+
+  h2 {
+    font-size: var(--font-size-small);
+  }
+}
+
+p {
+  font-size: var(--font-size-small);
+  color: var(--clr-error);
+  margin: var(--spacing-small);
+}
+
+a {
+  text-decoration: none;
+  color: var(hsl(212, 33%, 89%));
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: var(--clr-success);
+  color: var(--clr-primary);
+  padding: var(--spacing-small) var(--spacing-big);
+  margin: var(--spacing-medium) 0;
+  border-radius: 10px;
+  animation: pulse 3s infinite ease-out;
+
+  &:disabled {
+    cursor: default;
+    background-color: var(--clr-error);
+    animation: none;
+  }
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0px 0px 6px 0px #bdc1c3fa;
+  }
+  to {
+    box-shadow: 0px 0px 6px 5px #bdc1c3fa;
+  }
+}
+
+/* Utility classes */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: var(--spacing-big);
+  margin-bottom: var(--spacing-medium);
+}
+
+.margin-left {
+  margin-left: 10rem;
+}
+
+@media (max-width: 1150px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Login and Register pages */
+.login,
+.register {
+  flex-direction: column;
+  margin-top: var(--spacing-big);
+  color: var(--clr-primary);
+
+  input {
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--spacing-medium);
+    margin: var(--spacing-small);
+  }
+}
+
+.login__redirect,
+.register__redirect {
+  padding: 1rem;
+  color: white;
+
+  span {
+    color: aqua;
+    cursor: pointer;
+    margin-left: 0.4em;
+  }
+}

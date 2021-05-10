@@ -1,0 +1,13 @@
+.error__page {
+  flex-direction: column;
+}
+
+.btn-warning {
+  background: var(--clr-error);
+  font-size: var(--font-size-small);
+  animation: none;
+}
+
+.btn-warning:hover {
+  transform: scale(1.1);
+}

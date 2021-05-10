@@ -1,0 +1,37 @@
+/* Dashboard*/
+
+.dashboard {
+  display: grid;
+  width: 98%;
+  margin: 0 auto;
+
+  h1,
+  h2 {
+    font-family: Georgia, sans-serif;
+  }
+}
+
+/* Picker*/
+
+.picker {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5em;
+}
+
+/* Currency Picker */
+
+.menu-flags-button {
+  margin-top: var(--spacing-big);
+}
+
+@media (max-width: 1150px) {
+  .menu-flags-button {
+    margin-left: 2.5em;
+  }
+}
+
+/* Date Picker */
+.date__picker {
+  flex: 0.6;
+}
