@@ -5,7 +5,7 @@ const cors = require('cors');
 const userRouter = require('./routes/api/userRoute');
 const stocksRouter = require('./routes/api/stocksRoute');
 
-const connectDB = require('./config/db');
+const connectDB = require('./dbConnector/db');
 require('dotenv').config();
 
 const app = express();
