@@ -12,11 +12,11 @@ The API contains of 4 routers: 2 routes are designated for users and 2 routes ar
 
 Users routes:<br>
 1)/api/users         - Creates a new user and save the user in the database. <br>
-2)/api/users/login   - allows login to the app and also stores a JWT token in the user's localstorage. <br>
+2)/api/users/login   - Allows login to the app, stores a JWT token at the user's localstorage after the user has successfully logged in. <br>
 
 Stocks routes:<br>
-1)/api/stocks        - gets all the available Bitcoin data and stores it in the database.<br>
-2)/api/stocks/stock  - gets the Bitcoin value for a given date from the data saved in /api/stocks.<br>
+1)/api/stocks        - Gets all the available Bitcoin data from Alpha Vantage API and stores it in the database.<br>
+2)/api/stocks/stock  - Gets the Bitcoin value for a selected date from the database.<br>
  
  
 ### The Client consist of 4 pages:
@@ -31,13 +31,14 @@ Stocks routes:<br>
     *	The Login page uses React Hook form to validate the form.
     * Only if the user is a valid user he will be redirected to the dashboard page.
 
-3.  The Dashboard consist of the 3 components: CurrencyPicker,DatePicker,StockChart.
-    * The dashboard page displays the value of Bitcoin by date and by currency(USD or NIS).
-    *	CurrencyPicker: allows the user to select the currency(NIS or USD), the component uses react-flags-select package.
-    * DatePicker: allows the user to select the Date, the component uses date-fns, and Material-UI.
-    *	StockChart:  displays the Bitcoin value, the component uses Chart.js.
+3.  Dashboard Page:
+    * The dashboard page displays the Bitcoin value based on the date and currency selected by the user.
+    * The Dashboard page consist of three components: CurrencyPicker,DatePicker,StockChart.
+    *	CurrencyPicker: allows the user to select the currency(NIS or USD), uses react-flags-select package.
+    * DatePicker: allows the user to select the Date, uses date-fns, and Material-UI.
+    *	StockChart: displays the Bitcoin value, uses Chart.js.
  
-5.  Error Page:
+5.  404 Error Page:
     * If the user tries to go to an undefined route he will get to the 404 error page which allows him to redirect to the login page.
  
   The app state is managed by Redux Toolkit, the state is divided into two slices:userSlice,userSlice.
