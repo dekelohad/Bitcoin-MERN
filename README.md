@@ -4,7 +4,7 @@
 The Bitcoin app allows authenticated users to get the current Bitcoin value by a given date and by given currency( USD or NIS).
 
 ### Technologies in use:
-React,Redux Toolkit,redux-thunk,Material-UI,Chart.js,Node.js,MongoDB.
+React, Redux Toolkit, Redux Thunk, Material-UI, Chart.js, Node.js, Express.js, MongoDB.
 
 
 ### Description of the API:
