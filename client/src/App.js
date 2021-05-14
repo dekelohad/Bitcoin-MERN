@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './style.scss';
 import { PrivateRoute } from './utils/PrivateRoute';
-import Register from './pages/Register/Register';
-import Login from './pages/Login/Login';
-import Error from './pages/Error/Error';
-import Dashboard from './pages/Dashboard/Dashboard';
+import Register from './pages/register/Register';
+import Login from './pages/login/Login';
+import Error from './pages/error/Error';
+import Dashboard from './pages/dashboard/Dashboard';
 
 const App = () => {
   return (
