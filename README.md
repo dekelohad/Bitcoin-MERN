@@ -1,5 +1,4 @@
 # Bitcoin App
- ### Demo: https://bitcoin-mern.herokuapp.com/
 
 The Bitcoin app allows authenticated users to get the current Bitcoin value by a given date and by given currency( USD or NIS).
 
@@ -8,7 +7,7 @@ React, Redux Toolkit, Redux Thunk, Material-UI, Chart.js, Node.js, Express.js, M
 
 
 ### Description of the API:
-The API contains of 4 routers: 2 routes are designated for users and 2 routes are designated for stocks. 
+The API contains 4 routers: 2 routes are designated for users and 2 routes are designated for stocks. 
 
 Users routes:<br>
 1)/api/users         - Creates a new user and save the user in the database. <br>
@@ -45,5 +44,6 @@ Stocks routes:<br>
   The asynchronous parts of the app are managed by redux-thunk.
   
  
-  
+ 
+
   
